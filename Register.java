@@ -247,7 +247,7 @@ public class Register extends javax.swing.JFrame {
         String password = String.valueOf(edtPassword.getPassword());
         String confirmPassword = String.valueOf(edtConfirmPassword.getPassword());
         
-        if(name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()){
+        if(name.isEmpty()){
             JOptionPane.showMessageDialog(this, "Fill up the form properly.", "Error", JOptionPane.ERROR_MESSAGE);
         }
         
@@ -261,28 +261,28 @@ public class Register extends javax.swing.JFrame {
         
         else if(!password.equals(confirmPassword)){
             JOptionPane.showMessageDialog(null, "Retype The Password Again");
-        }
-        
-        PreparedStatement ps;
-        String query = "INSERT INTO `users`(`name`, `username`, `email`, `password`, `confirm_password`) VALUES (?,?,?,?,?)";
-
-
-        try {
-            ps = DBConnection.getConnection().prepareStatement(query);
-
-            ps.setString(1, name);
-            ps.setString(2, username);
-            ps.setString(3, email);
-            ps.setString(4, password);
-            ps.setString(5, confirmPassword);
             
-            if(ps.executeUpdate() > 0){
-                JOptionPane.showMessageDialog(null, "New User Add");
+        }else{
+
+            try {
+                PreparedStatement ps;
+                String query = "INSERT INTO `users`(`name`, `username`, `email`, `password`, `confirm_password`) VALUES (?,?,?,?,?)";
+            
+                ps = DBConnection.getConnection().prepareStatement(query);
+                ps.setString(1, name);
+                ps.setString(2, username);
+                ps.setString(3, email);
+                ps.setString(4, password);
+                ps.setString(5, confirmPassword);
+
+                if(ps.executeUpdate() > 0){
+                    JOptionPane.showMessageDialog(null, "New User Add");
+                }
+
+            } catch (SQLException ex) {
+                Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
             }
-         
-        } catch (SQLException ex) {
-            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-        }      
+        }     
     }//GEN-LAST:event_bttSignUpActionPerformed
 
     private void edtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtNameActionPerformed
