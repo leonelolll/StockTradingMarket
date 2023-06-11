@@ -1,6 +1,7 @@
 package org.example;
 
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -8,11 +9,10 @@ import java.net.http.HttpResponse;
 import java.util.Scanner;
 import org.json.JSONObject;
 
-import static com.sun.management.HotSpotDiagnosticMXBean.ThreadDumpFormat.JSON;
 
 
 public class testAPI {
-    public static void main(String[] args) {
+    public static void fetchDataFromAPI() throws IOException{
         Scanner input = new Scanner(System.in);
         String symbol;
         System.out.print("Enter the stock symbol : ");
