@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="StockTradingMarket">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/protobuf-java-3.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-5.1.48.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-8.0.19.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/json-20230227.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-beanutils-1.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-lang-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-lang3-3.12.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ezmorph-1.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/gson-2.10.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/json-20230227.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
