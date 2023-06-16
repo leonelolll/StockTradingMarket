@@ -1,4 +1,4 @@
-package LoginPage;
+package dashboard;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ public class Search extends JFrame implements ActionListener {
     public Search() {
         setTitle("Stock Price Search");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 300);
+        setSize(969, 628);
 
         // Create components
         JPanel mainPanel = new JPanel();

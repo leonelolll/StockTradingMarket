@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package LoginPage;
+package dashboard;
 import java.sql.Connection;
 import java.sql.DriverManager;
+
 
 /**
  *
@@ -16,7 +17,7 @@ public class DBConnection {
         Connection conn = null;
         try {
             //register jdbc driver
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             //open a connection
             conn = DriverManager.getConnection("jdbc:mysql://localhost/java_login_register", "root", "");
                     
